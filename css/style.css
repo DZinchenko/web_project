@@ -1,0 +1,219 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	height: 100%;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	width: 100%;
+	height: 50px;
+	background-color: #454C43;
+	color: #E3B505;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+
+	font-family: "Gemunu Libre";
+
+	border-bottom: 6px solid #E3B505;
+}
+
+.header-title{
+	font-weight: 800;
+	font-size: 250%;
+	letter-spacing: 2px;
+	margin: 0 20px;
+
+	flex: 1 1 auto;
+}
+
+.header-menu{
+	height: inherit;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-menu-item{
+	font-size: 150%;
+	letter-spacing: 1px;
+	padding: 0 20px;
+}
+
+.header-divider{
+	height: 100%;
+	background-color: #E3B505;
+	min-width: 5px;
+	color: #E3B505;
+	margin: 0;
+	border: none;
+}
+
+.content{
+	flex: 1 1 auto;
+	background-color: #D5D9D4;
+}
+
+.content-container{
+	padding: 10px 2%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+	font-family: "Montserrat"
+}
+
+.content-cell{
+  width: calc(96%/3 - 30px);
+	outline: solid #E3B505 3px;
+	padding: 15px;
+	margin: 15px 5px;
+	background-color: #EAECEA;
+	text-align: center;
+}
+
+.content-cell-img{
+	width: 100%;
+}
+
+.content-cell-title{
+	font-size: 150%;
+	padding-top: 15px;
+	padding-bottom: 8px;
+}
+
+.content-cell-text{
+	font-size: 100%;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 12;
+  -webkit-box-orient: vertical;
+}
+
+.footer{
+	height: 40px;
+	background-color: #454C43;
+	color: #E3B505;
+	font-family: "Gemunu Libre";
+	font-size: 100%;
+	border-top: 6px solid #E3B505;
+	align-items: center;
+	padding: 8px 0;
+}
+
+@media (max-width: 800px) {
+	.content-cell{
+	  width: calc(96%/2 - 35px);
+	}
+}
+
+@media (min-width: 500px) {
+	.header-menu-item{
+	  line-height: 40px;
+		margin: 0 5px;
+	  display: inline-block;
+	  vertical-align: middle;
+	}
+
+	.header-menu-item:hover{
+		background-color: #E3B505;
+		color: #454C43;
+	}
+}
+
+@media (max-width: 500px) {
+	.header{
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		height: 80px;
+		padding-bottom: 6px;
+	}
+
+	.header-title{
+		margin: 0;
+	}
+
+	.header-menu{
+		width: 100%;
+		border-top: 3px solid #E3B505;
+		margin-top: 5px;
+		padding-top: 5px;
+		justify-content: space-around;
+	}
+
+	.header-divider{
+		display: none;
+	}
+}
+
+@media (max-width: 450px) {
+	.content-cell{
+	  width: calc(96% - 20px);
+	}
+}
+
+@media (max-width: 300px) {
+	.header{
+		height: 110px;
+	}
+
+	.header-title{
+		margin: 0;
+	}
+
+	.header-menu{
+		flex-direction: column;
+	}
+
+}
