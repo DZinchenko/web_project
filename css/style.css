@@ -161,7 +161,7 @@ body {
 	}
 }
 
-@media (min-width: 500px) {
+@media (min-width: 570px) {
 	.header-menu-item{
 		line-height: 40px;
 		margin: 0 5px;
@@ -175,7 +175,7 @@ body {
 	}
 }
 
-@media (max-width: 500px) {
+@media (max-width: 570px) {
 	.header{
 		flex-direction: column;
 		flex-wrap: nowrap;
@@ -221,7 +221,7 @@ body {
 	}
 }
 
-@media (max-width: 300px) {
+@media (max-width: 365px) {
 	.header{
 		height: 110px;
 	}
@@ -295,4 +295,16 @@ body {
 .cart-cell-btn:hover {
 	background-color:#e3b705;
 	color:#454c43;
+}
+
+@media (max-width: 500px) {
+	.cart-container {
+		margin-top: 10%;
+		margin-left: calc(10% - 10px);
+		width: 80%;
+		height: auto;
+		background-color: #D5D9D4;
+		border:6px solid #e3b705;
+		padding: 5px;
+	}
 }
