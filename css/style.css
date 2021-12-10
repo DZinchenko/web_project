@@ -45,9 +45,9 @@ table {
 }
 
 body {
-	height: 100%;
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 
 .header {
@@ -86,6 +86,7 @@ body {
 	font-size: 150%;
 	letter-spacing: 1px;
 	padding: 0 20px;
+	user-select: none;
 }
 
 .header-divider{
@@ -112,8 +113,8 @@ body {
 	font-family: "Montserrat"
 }
 
-.content-cell{
-  width: calc(96%/3 - 30px);
+.product-cell{
+	width: calc(96%/3 - 30px);
 	outline: solid #E3B505 3px;
 	padding: 15px;
 	margin: 15px 5px;
@@ -121,23 +122,26 @@ body {
 	text-align: center;
 }
 
-.content-cell-img{
+.product-cell-img{
 	width: 100%;
 }
 
-.content-cell-title{
+.product-cell-name{
 	font-size: 150%;
+	font-weight: bold;
 	padding-top: 15px;
 	padding-bottom: 8px;
 }
 
-.content-cell-text{
+.product-cell-cost{
 	font-size: 100%;
+	font-weight: 600;
+	padding-bottom: 8px;
 
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 12;
-  -webkit-box-orient: vertical;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 12;
+	-webkit-box-orient: vertical;
 }
 
 .footer{
@@ -152,17 +156,17 @@ body {
 }
 
 @media (max-width: 800px) {
-	.content-cell{
-	  width: calc(96%/2 - 35px);
+	.product-cell{
+		width: calc(96%/2 - 35px);
 	}
 }
 
 @media (min-width: 500px) {
 	.header-menu-item{
-	  line-height: 40px;
+		line-height: 40px;
 		margin: 0 5px;
-	  display: inline-block;
-	  vertical-align: middle;
+		display: inline-block;
+		vertical-align: middle;
 	}
 
 	.header-menu-item:hover{
@@ -197,9 +201,23 @@ body {
 	}
 }
 
+.product-cell-btn {
+	background-color:#454c43;
+	border:6px solid #e3b705;
+	color:#e3b705;
+	font-size:17px;
+	padding:10px 20px;
+	font-family: "Montserrat";
+}
+.product-cell-btn:hover {
+	background-color:#e3b705;
+	color:#454c43;
+	font-weight: 800;
+}
+
 @media (max-width: 450px) {
-	.content-cell{
-	  width: calc(96% - 20px);
+	.product-cell{
+		width: calc(96% - 20px);
 	}
 }
 
@@ -215,5 +233,66 @@ body {
 	.header-menu{
 		flex-direction: column;
 	}
+}
 
+.cart {
+	font-family: "Gemunu Libre";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	top: 0%;
+	left: 0%;
+	background-color: #454C4364;
+}
+
+.cart-container {
+	margin-top: 10%;
+	margin-left: 25%;
+	width: 50%;
+	height: auto;
+	background-color: #D5D9D4;
+	border:6px solid #e3b705;
+	padding: 5px;
+}
+
+.cart-close-btn {
+	height: 20px;
+	width: 20px;
+	float: right;
+}
+
+.cart-header {
+	font-size: 150%;
+	font-weight: 600;
+}
+
+.cart-overall-price {
+	font-size: 130%;
+	font-weight: 600;
+}
+
+.cart-items-container {
+	margin: 10px 0;
+}
+
+.cart-cell {
+	font-family: "Montserrat";
+	padding-bottom: 5px;
+	font-size: 120%;
+	font-weight: 400;
+}
+
+.cart-cell-btn {
+	font-size: 80%;
+	background-color:#454c43;
+	border:2px solid #e3b705;
+	color:#e3b705;
+	font-weight: 800;
+	width: 30px;
+	height: 30px;
+}
+.cart-cell-btn:hover {
+	background-color:#e3b705;
+	color:#454c43;
 }
