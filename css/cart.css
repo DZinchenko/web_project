@@ -58,6 +58,7 @@
 .cart-cell-btn:hover {
 	background-color:#e3b705;
 	color:#454c43;
+	cursor: pointer;
 }
 
 @media (max-width: 500px) {

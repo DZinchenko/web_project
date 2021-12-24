@@ -172,6 +172,7 @@ body {
 	.header-menu-item:hover{
 		background-color: #E3B505;
 		color: #454C43;
+		cursor: pointer;
 	}
 }
 
@@ -213,6 +214,7 @@ body {
 	background-color:#e3b705;
 	color:#454c43;
 	font-weight: 800;
+	cursor: pointer;
 }
 
 @media (max-width: 450px) {
